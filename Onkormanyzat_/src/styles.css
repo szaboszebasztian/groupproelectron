@@ -1,0 +1,34 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+
+
+/* body{
+  background-image: url("./assets/hatter.jpg");
+}
+body, .jobboldal , .baloldal {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e1e6ee; 
+  color: #333; 
+} */
+/* nav{
+  background-image: url("./assets/fejlec.jpeg");
+} */
+
+
+
+
+
+
+
+
+
+
+
+/* 
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */

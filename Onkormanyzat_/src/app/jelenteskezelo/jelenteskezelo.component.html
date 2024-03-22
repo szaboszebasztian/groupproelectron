@@ -1,0 +1,55 @@
+
+  <div class="container mt-5">
+    <div class="appointment-container">
+      <h2>Jelentéskezelő</h2>
+      <form (ngSubmit)="inputForm()" #idopontForm="ngForm">
+  
+        <div class="form-group">
+          <label [(ngModel)]="bejelentesModel.type" for="type">Válasszon típust:</label>
+          <select class="form-control" id="type" name="type" required>
+            <option value="kozteruleti">Közterületi</option>
+            <option value="uthiba">Úthiba</option>
+            <!-- Rang-zárolt jelentések -->
+            <option value="viz-gaz">Víz-gáz</option>
+            <option value="lomtalanitas">Lomtalanítás</option>
+            <option value="szemetszallitas">Szemétszállítás</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label [(ngModel)]="bejelentesModel.urgency" for="sulyossag">Súlyosság:</label>
+          <select class="form-control" id="sulyossag" name="sulyossag" required>
+            <!-- Rang-zárolt jelentések -->
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+  
+        <div class="form-group">
+          <label for="telefonszam">Telefonszám:</label>
+          <input [(ngModel)]="bejelentesModel.phone"  type="tel" class="form-control" id="telefonszam" name="telefonszam" required>
+        </div>
+  
+        <div class="form-group">
+          <label for="description">Leírás:</label>
+          <input [(ngModel)]="bejelentesModel.description" type="text" class="form-control" id="description" name="description"  required>
+        </div>
+
+        <div class="form-group">
+          <label for="helyszin">Helyszín:</label>
+          <input [(ngModel)]="bejelentesModel.location" type="text" class="form-control" id="helyszin" name="helyszin"  required>
+        </div>
+  
+        <div class="form-group">
+          <label for="idopont">Ekkor:</label>
+          <input [(ngModel)]="bejelentesModel.date" type="datetime-local" class="form-control" id="idopont" name="idopont"  required>
+        </div>
+  
+        <button type="submit" class="btn btn-primary" [disabled]="!idopontForm.valid">Bejelentés Küldése</button>
+      </form>
+    </div>
+  </div>
+  
